@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfoodproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": { 
+    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StacyBo/bonneaustacy_3_27052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StacyBo/bonneaustacy_3_27052021/issues"
+  },
+  "homepage": "https://github.com/StacyBo/bonneaustacy_3_27052021#readme",
+  "dependencies": {
+    "sass": "^1.35.2"
+  }
+}
