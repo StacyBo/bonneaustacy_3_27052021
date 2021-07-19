@@ -1,1 +1,3 @@
-# bonneaustacy_3_27052021
+# installation
+1. lancer la cmd `npm install`
+1. lancer la cmd `npm run sass`
