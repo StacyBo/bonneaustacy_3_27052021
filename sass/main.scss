@@ -1,7 +1,13 @@
-body 
+/* -- Mobile version -- */
+@media only screen and (max-width: 767px) 
 {
-    color: blue;
-    :hover{
-        color: red;
+    #logo img {
+        height: 30px;
+        width: 120px;
+    }
+
+    .header img {
+        height: 255px;
+        width: 370px;
     }
 }
