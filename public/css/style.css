@@ -1,1 +1,14 @@
+/* -- Mobile version -- */
+@media only screen and (max-width: 767px) {
+  #logo img {
+    height: 30px;
+    width: 120px;
+  }
+
+  .header img {
+    height: 255px;
+    width: 370px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
