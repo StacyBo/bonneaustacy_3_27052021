@@ -1,94 +1,124 @@
+@import "./utils/variables";
+
 /* -- Mobile version -- */
-@media only screen and (max-width: 767px) 
-{
+/*@media only screen and (max-width: 767px)
+{*/
     body{
         margin: 0;
         padding: 0;
     }
+
     /*Header*/
-    #logo img {
-        height: 30px;
-        width: auto;
-        margin: 15px 0 15px 0;
-    }
-
-    header{
-        display: flex;
-        justify-content: center;
-    }
-
-    .header img {
-        height: 255px;
-        width: 370px;
-        justify-content: center;
-    }
-
-    /*Localisation*/
-    .localisation
-    {
-        display: flex;
-        background-color: #F2F2F2;
-        height: 40px;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .localisation p {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-    }
-
-    .menu{
+    .header {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin-top: 20px;
+        &__link {
+            text-decoration: none;
+            color: black;    
+        }
+        &__link:hover{
+            color: black;
+        }
+
+        .header__container{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            .icon .fa-arrow-left{
+                margin-right: 10px;
+                padding-top: 5px;
+                font-size: 20px;
+                margin-left: 20px;
+            }
+            .logo {
+                &__img {
+                    height: 30px;
+                    width: auto;
+                }
+            }
+        }
+        .cover {
+            &__img{
+            height: 255px;
+            width: 100%;
+            }
+        }
     }
 
-    h1 {
+    .main{
+        .localisation{
+            display: flex;
+            background-color: #F2F2F2;
+            height: 40px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            &__name{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 14px;  
+                margin-left: 10px;
+            }
+        }
+    }
+
+    @mixin btn {
         display: flex;
+        align-items: center;
         justify-content: center;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 25px;
-        text-align: center;
-        margin: 15px 0 0 0;
-    }
-
-    p {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 100;
-        font-size: 20px;
-        margin-left: 15px;
-        text-align: center; 
-    }
-
-    input.button {
-        background: linear-gradient(#FF79DA, #9356DC);
-        height: 50px;
-        width: 220px;
+        background: linear-gradient($color-secondary,$color-primary);
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         border: none;
-        font-size: 17px;
         border-radius: 3em 3em 3em 3em;
         box-shadow: 0px 2px 10px #B8B8B8;
         color: white;
         margin: 0 0 0 0;
+        text-decoration: none;
     }
 
-    input.button:hover {
-        box-shadow: 0px 2px 10px #757575;
+    .main .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title{
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            text-align: center;
+            margin: 15px 0 0 0;   
+        }
+        &__description{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            font-size: 20px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        &__btn{
+            @include btn;
+            height: 50px;
+            width: 220px;
+            font-size: 17px;
+        &:hover{
+            color: white;
+            box-shadow: 0px 2px 10px #757575;
+        }
+        }
     }
 
     /*Fonctionnement*/
 
-    h2 {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 25px;
-        margin: 15px 30px 30px 15px;        
+    .main .fonction{
+        &__title{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            margin: 15px 30px 30px 15px; 
+        }
     }
 
     .container-fonction {
@@ -100,38 +130,49 @@
         width: auto;
         border-radius: 1em 1em 1em 1em;
         margin: 15px 15px 15px 30px;
-    }
-
-    .container-fonction.number{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #9356DC;
-        color: white;
-        font-size: 15px;
-        height: 25px;
-        width: 25px;
-        margin-left: -10px;
-    }
-
-    .icon-fonction {
-        align-items: baseline;
-        color: #757575;
-        font-size: 23px;
-        margin-left: 30px;
-        text-align: left;
-    }
-
-    .text-fonction {
-        color: black;
-        font-size: 18px;
-        font-weight: 700;
-        margin-left: 30px;
+        &__number{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #9356DC;
+            color: white;
+            font-size: 15px;
+            height: 25px;
+            width: 25px;
+            border-radius: 1em 1em 1em 1em;
+            margin-left: -10px; 
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        .fas.icon-fonction{
+            align-items: baseline;
+            color: #757575;
+            font-size: 23px;
+            margin-left: 30px;
+            text-align: left;
+        }
+        &__description{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 30px;          
+        }
     }
 
     /*Restaurant*/
 
-    .container-restaurant {
+    .main .restaurants{
+        &__title{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            margin: 15px 30px 30px 15px; 
+        }
+    }
+
+    .container-restaurants {
         color: black;
         background-color: white;
         height: 250px;
@@ -139,31 +180,25 @@
         margin: 20px 15px 20px 15px;
         box-shadow: 0px 2px 10px #B8B8B8;
         border-radius: 1em 1em 1em 1em;
+        &:hover{
+            box-shadow: 0px 2px 10px #757575;
+        }
+        &__link {
+            text-decoration: none;
+            color: black;    
+        }
+        &__link:hover{
+            color: black;
+        }
+        .media-restaurants{
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 1em 1em 0 0;
+        }   
     }
 
-    .container-restaurant:hover{
-        box-shadow: 0px 2px 10px #757575;
-    }
-
-
-    .container-restaurant a {
-        text-decoration: none;
-        color: black;
-    }
-
-    a:hover{
-        color: black;
-    }
-    
-
-    .media-restaurant{
-        width: 100%;
-        height: 170px;
-        object-fit: cover;
-        border-radius: 1em 1em 0 0;
-    }
-
-    .description-restaurant {
+    .description-restaurants {
         display: grid;
         grid-template-columns: 8fr 2fr;
         grid-template-rows: 2fr ;
@@ -171,57 +206,160 @@
         "name name heart"
         "city city hear"
         ;
-    }
-    
-    h3.name-restau {
-        grid-area: name;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 15px;
-        margin-left: 15px;
-        margin-bottom: 0px;
-    }
-
-    .menu-city{
-        grid-area: city;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        font-size: 17px;
-        text-align: left;
-        margin-left: 15px;
-        margin-top: 0px;
-    }
-
-    .fas.fa-heart{
-        grid-area: heart;
-        margin: 15px 30px 0 0;
-        font-size: 30px;
+        &__name{
+            grid-area: name;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            margin-left: 15px;
+            margin-bottom: 0px;
+        }
+        &__menu-city{
+            grid-area: city;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 17px;
+            text-align: left;
+            margin-left: 15px;
+            margin-top: 0px;
+        }
+        .fas.fa-heart{
+            grid-area: heart;
+            margin: 15px 30px 0 0;
+            font-size: 30px;
+        }
     }
 
     /* footer */
 
-    footer {
+    .footer {
         background-color: #383838;
         height: 200px;
         color: white;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         font-size: 15px;
+        padding-bottom: 20px;
+        &__title {
+            font-family: 'Shrikhand', cursive;
+            font-size: 18px;
+            color: white;
+            text-align: left;
+            margin: 0 0 0 38px;
+            padding-top: 30px;
+        }
+        &__list {
+            list-style-type: none;
+            margin-top: 20px;
+            margin-left: 40px;
+            padding-inline-start: 0px;
+        }
+        .chip {
+            margin: 10px 0 10px 0;
+        }
     }
 
-    .footer-title{
-        font-family: 'Shrikhand', cursive;
-        font-size: 18px;
-        color: white;
-        text-align: left;
-        margin-left: 38px;
-        padding-top: 30px;
+    /*PAGES CARTE*/
+
+    .main{
+        background-color: whitesmoke;
+        border-radius: 3em 3em 0 0;
+        height: auto;
+        padding-bottom: 40px;
     }
 
-    ul li
-    {
-        list-style-type: none;
-        margin-top: 10px;
-        padding-inline-start: 0px;
+    .main .title{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-right: 40px;
+        justify-content: space-between;
+        &__name{
+            font-family: 'Shrikhand', cursive;
+            font-weight: 400;
+            font-size: 32px;
+            margin: 50px 0 0 20px;
+        }
+        .far.fa-heart{
+            font-size: 25px;
+            font-weight: 100;
+            margin-left: 30px;
+        }
     }
-}
+
+    .meal{
+        margin-left: 20px;
+        margin-top: 30px;
+        &__title{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 18px; 
+            border-bottom: solid 4px $color-tertiary;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            width: 42px;
+        }
+    }
+
+    .container{
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        height: 70px;
+        box-shadow: 0px 2px 10px #B8B8B8;
+        padding-left: 10px;
+        margin: 0 20px 20px 0;
+        &:hover{
+            box-shadow: 0px 2px 10px #383838;
+        }
+        &__title{
+            justify-content: stretch;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 20px; 
+            white-space : nowrap;
+            overflow : hidden;
+            text-overflow : ellipsis;
+            margin: 0 0 5px 0;
+            padding-top: 15px;
+        }
+        &__flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;   
+        }
+            &__description{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px; 
+                white-space : nowrap;
+                overflow : hidden;
+                text-overflow : ellipsis;
+                margin: 0;
+            }
+            &__price{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 16px; 
+                margin: 0 20px 0px 0;
+                padding-bottom: 10px;
+            }
+        }
+    
+    .order{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        .order-btn{
+            @include btn;
+            height: 50px;
+            width: 185px;
+            font-size: 18px;
+            &:hover{
+                color: white;
+                box-shadow: 0px 2px 10px #757575;
+            }
+            }
+        }
+
+    /*}*/
