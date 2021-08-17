@@ -13,92 +13,117 @@
     </head>
     
     <body>
-        <header>
-            <div id="logo">   
-                <img src="../images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+        <header class="header">
+            <div class="header__container">
+                <div class="icon">
+                    <a href="file:///Users/stacy/Documents/bonneaustacy_3_27052021/index.html" class="header__link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="logo"> 
+                    <img src="../images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class="logo__img">
+                </div>
             </div>
             <div class="cover">
                 <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo plat" class="cover__img">
             </div>
         </header>
 
-        <main>
-            <section>
-                <h1>Le délice des sens</h1>
-                <i class="fas fa-heart"></i>
+        <main class="main">
+            <section class="title">
+                <h1 class="title__name secondary-page">Le délice des sens</h1>
+                <i class="far fa-heart"></i>
             </section>
 
-            <section>
-                <div>
-                    <h2>ENTRÉES</h2>
+            <section class="meal">
+                    
+                <h2 class="meal__title">ENTRÉES</h2>
+                
+                <div class="container">
+                    <h3 class="container__title">Tartare de thon</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Assaisonné au yuzu</p>
+                        <p class="container__price">25€</p>
+                    </div>
                 </div>
                 
-                <div>
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
-                    <p>25€</p>
-                </div>
-                
-                <div>
-                    <h3>Bouchée de homard croustillant</h3>
-                    <p>Et sa farandole de petits légumes</p>
-                    <p>35€</p>
+                <div class="container">
+                    <h3 class="container__title">Bouchée de homard croustillant</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Et sa farandole de petits légumes</p>
+                        <p class="container__price">35€</p>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>Velouté de cèpes</h3>
-                    <p>Aux truffes</p>
-                    <p>20€</p>
+                <div class="container">
+                    <h3 class="container__title">Velouté de cèpes</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Aux truffes</p>
+                        <p class="container__price">20€</p>
+                    </div>
                 </div>
             </section> 
             
-            <section>
-                <div>
-                    <h2>PLATS</h2>
+            <section class="meal">
+
+                <h2 class="meal__title">PLATS</h2>
+
+                <div class="container">
+                    <h3 class="container__title">Poulet rôti aux herbes de Provence</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Et sa crème de truffe</p>
+                        <p class="container__price">40€</p>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>Poulet rôti aux herbes de Provence</h3>
-                    <p>Et sa crème de truffe</p>
-                    <p>40€</p>
+                <div class="container">
+                    <h3 class="container__title">Langouste rôtie</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Et ses légumes de saison</p>
+                        <p class="container__price">35€</p>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>Langouste rôtie</h3>
-                    <p>Et ses légumes de saison</p>
-                    <p>35€</p>
-                </div>
-
-                <div>
-                    <h3>Côte de boeuf Angus </h3>
-                    <p>Et sa purée de panais</p>
-                    <p>44€</p>
+                <div class="container">
+                    <h3 class="container__title">Côte de boeuf Angus </h3>
+                    <div class="container__flex">
+                        <p class="container__description">Et sa purée de panais</p>
+                        <p class="container__price">44€</p>
+                    </div>
                 </div>
             </section>
             
-            <section>
-                <div>
-                    DESSERTS
+            <section class="meal">
+
+                <h2 class="meal__title">DESSERTS</h2> 
+
+                <div class="container">
+                    <h3 class="container__title">Farandole de desserts</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Du chef</p>
+                        <p class="container__price">18€</p>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>Farandole de desserts</h3>
-                    <p>Du chef</p>
-                    <p>18€</p>
+                <div class="container">
+                    <h3 class="container__title">Crème brulée</h3>
+                    <div class="container__flex">
+                        <p class="container__description">Revisitée</p>
+                        <p class="container__price">22€</p>
+                    </div>
                 </div>
-
-                <div>
-                    <h3>Crème brulée</h3>
-                    <p>Revisitée</p>
-                    <p>22€</p>
+                
+                <div class="container">
+                    <h3 class="container__title">Tiramisu</h3>
+                    <div class="container__flex">
+                        <p class="container__description">À la noisette</p>
+                        <p class="container__price">23€</p>
+                    </div>
                 </div>
+            </section>
 
-                <div>
-                    <h3>Tiramisu</h3>
-                    <p>À la noisette</p>
-                    <p>23€</p>
-                </div>
-
+            <section class="order">
+                <a href="#" class="order-btn">Commander</a>
             </section>
         </main>
 

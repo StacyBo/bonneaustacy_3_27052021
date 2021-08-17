@@ -1,0 +1,38 @@
+/*Header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    &__link {
+        text-decoration: none;
+        color: black;    
+    }
+    &__link:hover{
+        color: black;
+    }
+    .header__container{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        .icon .fa-arrow-left{
+            position: absolute;
+            padding-top: 5px;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .logo {
+            margin-right: auto;
+            margin-left: auto;
+            &__img {
+                height: 30px;
+                width: auto;
+            }
+        }
+    }
+    .cover {
+        &__img{
+        height: 255px;
+        width: 100%;
+        }
+    }
+}
