@@ -43,11 +43,11 @@
         background-color: white;
         border-radius: 1em 1em 1em 1em;
         height: 70px;
-        box-shadow: 0px 2px 10px #B8B8B8;
+        box-shadow: 0px 2px 10px $color-shadow;
         padding-left: 10px;
         margin: 0 20px 20px 0;
         &:hover{
-            box-shadow: 0px 2px 10px #383838;
+            box-shadow: 0px 2px 10px $color-shadow-hover;
         }
         &__title{
             justify-content: stretch;
@@ -92,7 +92,7 @@
             font-size: 18px;
             &:hover{
                 color: white;
-                box-shadow: 0px 2px 10px #757575;
+                box-shadow: 0px 2px 10px $color-shadow-hover;
             }
             }
         }
