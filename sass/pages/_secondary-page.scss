@@ -105,17 +105,6 @@
 .delay4{
     animation-delay: 800ms;
 }
-        
-@keyframes fadein{
-    0%{ 
-    opacity: 0;
-    transform: translateY(60px);
-}
-    100%{ 
-    opacity: 1;
-    transform: translateY(0px);
-    visibility:visible }
-    }
     
     .order{
     display: flex;
