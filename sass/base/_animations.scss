@@ -13,4 +13,45 @@
     0%{ 
     opacity: 0;
     transform: translateY(60px);}
+    100% {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+      }
 }
+@keyframes slideon {
+    0% {
+      transform:translate(0);
+    }
+    100% {
+      transform:translate(-70px);
+    }
+  }
+
+  @keyframes slideprice {
+    0% {
+      transform:translate(0);
+      margin-left: 20px;
+    }
+
+    20%{
+      transform:translate(0);
+      margin-left: 20px;
+    }
+
+    100% {
+      transform:translate(-50px);
+      margin-left: 55px;
+    }
+  }
+
+  @keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+      margin-left: -30px;
+    }
+    100% {
+      transform: rotate(360deg);
+      margin-left: 0;
+    }
+  }

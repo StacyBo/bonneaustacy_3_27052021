@@ -1,112 +1,165 @@
 
-    /*PAGES CARTE*/
+/*PAGES CARTE*/
 
-    .main{
-        background-color: whitesmoke;
-        padding-bottom: 10px;
-    }
+.main{
+    background-color: whitesmoke;
+    padding-bottom: 10px;
+}
     
-    .main-menu{
-        transform: translateY(-50px);
-        background-color: whitesmoke;
-        border-radius: 3em 3em 0 0;
-    }
+.main-menu{
+    transform: translateY(-50px);
+    background-color: whitesmoke;
+    border-radius: 3em 3em 0 0;
+    @media only screen and (min-width: 1025px){
+        padding-left: 50px;
+        padding-right: 50px;
+}
+}
 
-    .main .title{
-        display: grid;
-        grid-template-columns: 8fr 2fr;
-        grid-template-areas: 
-        "title title heart"
-        ;
-        &__name{
-            grid-area: title;
-            font-weight: 400;
-            font-size: 26px;
-            margin: 50px 0 0 20px;
-        }
-        .fa-heart{
-            margin: 55px 30px 0 0;
-            grid-area: heart;
-            font-size: 26px;
-        }
-        .like-hover{
-            text-align: center;
-            @include like;
-        }
+.main .title{
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-areas: 
+    "title title heart"
+    ;
+    &__name{
+        grid-area: title;
+        font-weight: 400;
+        font-size: 26px;            
+        margin: 50px 0 0 20px;
     }
-
-    .meal{
-        margin-left: 20px;
-        margin-top: 30px;
-        &__title{
-            font-weight: 300;
-            font-size: 18px; 
-            border-bottom: solid 4px $color-tertiary;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            width: 42px;
-            animation: fadein 1000ms linear both;
-            visibility: hidden;        
-        }
+    .fa-heart{
+        margin: 55px 30px 0 0;
+        grid-area: heart;
+        font-size: 26px;
     }
+    .like-hover{
+        text-align: center;
+        @include like;
+    }
+}
 
-    .container{
-        background-color: white;
-        border-radius: 1em 1em 1em 1em;
-        height: 70px;
-        box-shadow: 0px 2px 10px $color-shadow;
-        padding-left: 10px;
-        margin: 0 20px 20px 0;
-        animation: fadein 1000ms linear both;
-        visibility: hidden;    
-        &:hover{
-            box-shadow: 0px 2px 10px $color-shadow-hover;
-        }
-        &__title{
-            justify-content: stretch;
-            font-weight: 400;
-            font-size: 20px; 
-            white-space : nowrap;
-            overflow : hidden;
-            text-overflow : ellipsis;
-            margin: 0 0 5px 0;
-            padding-top: 15px;
-        }
-        &__flex{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;   
-        }
-            &__description{
-                font-weight: 300;
-                font-size: 16px; 
-                white-space : nowrap;
-                overflow : hidden;
-                text-overflow : ellipsis;
-                margin: 0;
-            }
-            &__price{
-                font-weight: 400;
-                font-size: 16px; 
-                margin: 0 20px 0px 0;
-                padding-bottom: 10px;
-            }
-        }
+.container-plate{
+    @media only screen and (min-width: 1025px){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+}
+}
+
+.meal{
+    margin-left: 20px;
+    margin-top: 30px;
+    @media only screen and (min-width: 1025px){
+        width: 32%;
+        margin-left: 10px;
+}   
+    &__title{
+        font-weight: 300;
+        font-size: 18px; 
+        border-bottom: solid 4px $color-tertiary;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        width: 42px;
+    }
+}
+
+.container{
+    display: flex;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    height: 70px;
+    box-shadow: 0px 2px 10px $color-shadow;
+    padding-left: 10px;
+    margin: 0 20px 20px 0;
+    animation: fadein 1000ms linear both;
+    visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;        
+    &:hover{
+        box-shadow: 0px 2px 10px $color-shadow-hover;
+    }
+}
 
 .delay1{
-    animation-delay: 500ms;
+    animation-delay: 400ms;
 }        
 .delay2{
-    animation-delay: 600ms;
+    animation-delay: 550ms;
 }
 .delay3{
-    animation-delay: 700ms;
+    animation-delay: 650ms;
 }
-.delay4{
-    animation-delay: 800ms;
+
+.container:hover .container__checkbox{
+    animation: slideon 0.6s linear forwards;
+  }
+
+  .container:hover .container__right{
+    animation: slideprice 0.6s linear forwards;
+  }
+
+  .container:hover .fas.fa-check-circle{
+    animation: rotate-center 0.4s linear 200ms forwards;
+  }
+
+.container__title {
+    font-weight: 400;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 5px 0;
+    padding-top: 10px;
+}
+
+.container__left {
+    flex: 1;
+    overflow: hidden;
+}
+
+.container__description {
+    font-weight: 300;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.container__right{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    margin-left: 20px;
+}
+
+.container__price {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 35px 0 5px;
+}
+
+.container__checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: -70px;
+    border-radius: 0 1em 1em 0;
+    background-color: #99E2D0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+}
+.fas.fa-check-circle {
+    color: white;
+    font-size: 25px;
 }
     
-    .order{
+.order{
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -118,7 +171,6 @@
         font-size: 18px;
         &:hover{
         color: white;
-        box-shadow: 0px 2px 10px $color-shadow-hover;
     }
     }
 }
