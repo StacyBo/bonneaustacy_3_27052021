@@ -33,16 +33,7 @@
     animation: spin 2500ms linear 0s 1 ;
 }
 
-@keyframes spin{
-    0%{ transform: rotate(0deg);}
-    100%{ transform: rotate(360deg);}
-}
 
-@keyframes loading{
-    0%{opacity: 1;}
-    70%{opacity: 1;}
-    100%{opacity: 0; z-index: -1;}
-}
 .main{
     .localisation{
         display: flex;
@@ -84,10 +75,6 @@
         height: 50px;
         width: 220px;
         font-size: 17px;
-    &:hover{
-        color: white;
-        box-shadow: 0px 2px 10px #757575;
-    }
     }
 }
 
@@ -96,12 +83,26 @@
 .fonction{
     background-color: white;
     height: 440px;
+    @media only screen and (min-width: 1025px){
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
     &__title{
         background-color: white;
         font-weight: 700;
         font-size: 25px;
         margin: 15px 30px 30px 15px;
-        padding: 50px 0 0 0; 
+        padding: 50px 0 0 0;
+    }
+    &__tuto{
+        @media only screen and (min-width: 1025px){
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
     }
 }
 
@@ -115,6 +116,7 @@
     border-radius: 1em 1em 1em 1em;
     box-shadow: 0px 2px 10px $color-shadow;
     margin: 20px 15px 20px 30px;
+    flex: 1;
     &:hover{
         box-shadow: 0px 2px 10px $color-shadow-hover;
     }
@@ -139,11 +141,18 @@
         text-align: left;
     }
     &__description{
-        font-weight: 400;
+        font-weight: 300;
         color: black;
         font-size: 18px;
         font-weight: 700;
         margin-left: 30px;          
+    }
+}
+
+.container-fonction.number3{
+    background-color: lighten($color: $color-primary, $amount: 35);
+    .fas.fa-store{
+        color: $color-primary;
     }
 }
 
@@ -155,8 +164,24 @@
         font-size: 25px;
         margin: 15px 30px 30px 15px; 
         padding: 40px 0 0 0;
+        @media only screen and (min-width: 1025px){
+            padding-left: 50px;
+            padding-right: 50px;
+    }    
     }
 }
+
+.bloc-resto{
+    @media only screen and (min-width: 1025px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;  
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 30px;
+}
+}
+
 
 .container-restaurants {
     color: black;
@@ -166,6 +191,10 @@
     margin: 20px 15px 20px 15px;
     box-shadow: 0px 2px 10px $color-shadow;
     border-radius: 1em 1em 1em 1em;
+    @media only screen and (min-width: 1025px){
+        width: 47%;
+        height: 400px;
+}
     &:hover{
         box-shadow: 0px 2px 10px $color-shadow-hover;
     }
@@ -189,6 +218,9 @@
         position: absolute;
         z-index: 2;
         right: 30px;
+        @media only screen and (min-width: 1025px){
+            right: inherit;
+    }
     }
     .media-restaurants{
         z-index: 1;  
@@ -196,6 +228,9 @@
         height: 170px;
         object-fit: cover;
         border-radius: 1em 1em 0 0;
+        @media only screen and (min-width: 1025px){
+            height: 300px;
+    }
     }   
 }
 

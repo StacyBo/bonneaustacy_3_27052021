@@ -11,7 +11,7 @@
     margin: 0 0 0 0;
     text-decoration: none;
     &:hover{
-        box-shadow: 0px 2px 10px darken($color: $color-shadow-hover, $amount: 40);
+        box-shadow: 0px 2px 10px darken($color: $color-shadow-hover, $amount: 35);
         filter: brightness(105%);
     }
 }
