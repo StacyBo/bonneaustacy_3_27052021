@@ -10,10 +10,10 @@
     transform: translateY(-50px);
     background-color: whitesmoke;
     border-radius: 3em 3em 0 0;
-    @media only screen and (min-width: 1025px){
+    @media only screen and (min-width: 768px) and (max-width: 1024px){
         padding-left: 50px;
         padding-right: 50px;
-}
+    }
 }
 
 .main .title{
@@ -82,6 +82,59 @@
     }
 }
 
+.container__left {
+    flex: 1;
+    overflow: hidden;
+    .title-plate{
+        font-weight: 400;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 0 5px 0;
+        padding-top: 10px;
+    }
+    .description-plate{
+        font-weight: 300;
+        font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+}
+
+.container__right{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    margin-left: 20px;
+    .price {
+        font-weight: 400;
+        font-size: 16px;
+        margin: 0 35px 0 5px;
+    }
+}
+
+.container__checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: -70px;
+    border-radius: 0 1em 1em 0;
+    background-color: #99E2D0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+}
+
+.fas.fa-check-circle {
+    color: white;
+    font-size: 25px;
+}
+
 .delay1{
     animation-delay: 400ms;
 }        
@@ -104,61 +157,6 @@
     animation: rotate-center 0.4s linear 200ms forwards;
   }
 
-.container__title {
-    font-weight: 400;
-    font-size: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0 0 5px 0;
-    padding-top: 10px;
-}
-
-.container__left {
-    flex: 1;
-    overflow: hidden;
-}
-
-.container__description {
-    font-weight: 300;
-    font-size: 16px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0;
-}
-
-.container__right{
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 12px;
-    margin-left: 20px;
-}
-
-.container__price {
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0 35px 0 5px;
-}
-
-.container__checkbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-right: -70px;
-    border-radius: 0 1em 1em 0;
-    background-color: #99E2D0;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 70px;
-    height: 70px;
-}
-.fas.fa-check-circle {
-    color: white;
-    font-size: 25px;
-}
-    
 .order{
     display: flex;
     justify-content: center;
